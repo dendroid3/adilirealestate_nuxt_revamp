@@ -32,3 +32,23 @@ Adili Real Estate's website provides a professional online presence for the comp
 1. Clone the repository:
    ```bash
    git clone https://github.com/your-username/adili-real-estate.git
+
+2. Install packages:
+   ```bash
+   npm i
+
+3. Run the website:
+   ```bash
+   npm run dev
+
+## Building
+
+1. Build the files:
+   ```bash
+   npm run build
+
+2. Generate static files:
+   ```bash
+   npm run generate
+   
+3. Deploy the dist file to server
