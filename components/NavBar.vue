@@ -209,6 +209,7 @@
     <div />
   </div>
 </template>
+
 <script>
 export default {
   name: 'NavBar',
@@ -247,6 +248,7 @@ export default {
   }
 }
 </script>
+
 <style scoped>
   .app-bar-wrapper{
     z-index: 920;
@@ -256,6 +258,8 @@ export default {
     top: 0;
     right: 0;
     left: 0;
+    overflow-y: hidden;
+    overflow-x: hidden;
   }
 
   .menu{

@@ -1,6 +1,6 @@
 <template>
   <div
-    id="footer"
+    id="footerSection"
   >
     <v-row class="blue mt-4 mb-4" style="width: 80vw; margin-left: 10vw; line-height: 1px; position: absolute;">
       .
@@ -228,6 +228,29 @@
 export default {
   name: 'FooterSection',
 
+  data: () => {
+    return {
+      email: null,
+      sending_subsription_request: false
+    }
+  },
+
+  computed: {
+    email_is_valid () {
+      if (!this.email) {
+        return false
+      }
+      if (
+        (this.email.indexOf('@') > 1) &&
+        (this.email.lastIndexOf('.') > this.email.indexOf('@')) &&
+        (this.email.lastIndexOf('.') < (this.email.length - 1))
+      ) {
+        return true
+      }
+      return false
+    }
+  },
+
   methods: {
     call () {
       const url = 'tel: +254720244744'
@@ -257,6 +280,10 @@ export default {
     goSMS () {
       const url = 'sms: +254720244744'
       window.open(url, '_blank')
+    },
+
+    subscribe () {
+      console.log('Hello')
     }
 
   }
