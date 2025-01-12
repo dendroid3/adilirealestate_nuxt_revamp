@@ -8,8 +8,9 @@
 
     <!-- Desktop Version -->
     <v-row
-    v-if="!isMobile"
-    class="pa-4 d-flex">
+      v-if="!isMobile"
+      class="pa-4 d-flex"
+    >
       <v-col class="col-1 justify-end pa-0 d-flex align-center d-none d-md-flex">
         <v-icon class="rounded blue lighten-4" @click="scrollTheSheetToLeftDesktop">
           mdi-arrow-left

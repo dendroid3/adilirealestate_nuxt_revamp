@@ -4,7 +4,11 @@
 
     <about-section />
 
+    <available-properties-section />
+
     <how-to-buy-section />
+
+    <faqs-section />
   </div>
 </template>
 
@@ -12,6 +16,8 @@
 import HeroSection from '../components/home/HeroSection.vue'
 import AboutSection from '../components/home/AboutSection.vue'
 import HowToBuySection from '../components/home/HowToBuySection.vue'
+import FaqsSection from '../components/home/FaqsSection.vue'
+import AvailablePropertiesSection from '../components/home/AvailablePropertiesSection.vue'
 
 export default {
   name: 'Home',
@@ -19,7 +25,9 @@ export default {
   components: {
     HeroSection,
     AboutSection,
-    HowToBuySection
+    HowToBuySection,
+    FaqsSection,
+    AvailablePropertiesSection
   },
 
   head () {

@@ -5,7 +5,7 @@
     <v-row class="text--center">
       <v-col class="col-12 col-md-6 offset-md-3">
         <div class="bold blue--text d-flex text-center justify-center animate__animated animate__zoomIn heading" style="width:100%;">
-          <p class="d-flex justify-center text--center">
+          <p class="d-flex justify-center text--center heading">
             Affordable Plots Within Diani
           </p>
         </div>
@@ -41,9 +41,5 @@ export default {
 </script>
 
 <style scoped>
-  .p{
-    line-height: 1.75rem;
-    font-size: 18px;
-    font-weight: 400;
-  }
+
 </style>
