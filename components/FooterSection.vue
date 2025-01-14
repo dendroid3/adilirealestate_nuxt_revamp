@@ -150,7 +150,7 @@
               Our Socials
             </h3>
 
-            <v-row class="mt-4 no-gutters text-center rounded blue darken-1 pa-4 pointer" @click="goWhatsapp">
+            <v-row class="mt-4 no-gutters text-center rounded blue darken-1 pa-4 pointer" @click="goWhatsApp">
               <v-col class="col-12 mt-4">
                 <div class="mr-1 px-2 white--text">
                   <v-icon large class="white--text">
@@ -257,7 +257,7 @@ export default {
       window.open(url, '_blank')
     },
 
-    goWhatsapp () {
+    goWhatsApp () {
       const url = 'https://wa.me/+254720244744?text=I%20am%20interested%20in%20your%20land%20for%20sale'
       window.open(url, '_blank')
     },
