@@ -4,7 +4,7 @@
       Contact Us
     </div>
     <v-row class="no-gutters mb-3">
-      <v-col class="col-6">
+      <v-col class="col-12 col-md-6">
         <div>
           <div>
             <v-img
@@ -71,7 +71,7 @@
                   <h3 class="text-center mb-4 pb-4">
                     Our Socials
                   </h3>
-                  <v-row class="mt-4 no-gutters text-center rounded blue darken-1 pa-4 pointer" @click="goWhatsapp">
+                  <v-row class="mt-4 no-gutters text-center rounded blue darken-1 pa-4 pointer" @click="goWhatsApp">
                     <v-col class="col-12 mt-4">
                       <div class="mr-1 px-2 white--text">
                         <v-icon large class="white--text">
@@ -119,7 +119,7 @@
           </div>
         </div>
       </v-col>
-      <v-col class="col-5 offset-1 d-flex justify-center">
+      <v-col class="col-12 col-md-5 offset-md-1 d-flex justify-center">
         <v-form
           ref="form"
           v-model="valid"
@@ -130,7 +130,7 @@
             Quick Message
           </p>
           <v-text-field
-            v-model="contact_data.name"
+            v-model="contactData.name"
             :rules="rules.requiredRule"
             placeholder="name"
             label="name"
@@ -139,7 +139,7 @@
             clearable
           />
           <v-text-field
-            v-model="contact_data.email"
+            v-model="contactData.email"
             :rules="rules.requiredRule"
             placeholder="email"
             label="email"
@@ -148,7 +148,7 @@
             clearable
           />
           <v-text-field
-            v-model="contact_data.phone_number"
+            v-model="contactData.phone_number"
             :rules="rules.requiredRule"
             placeholder="phone number"
             label="phone number"
@@ -157,7 +157,7 @@
             clearable
           />
           <v-text-field
-            v-model="contact_data.subject"
+            v-model="contactData.subject"
             :rules="rules.requiredRule"
             placeholder="subject"
             label="subject"
@@ -166,7 +166,7 @@
             clearable
           />
           <v-textarea
-            v-model="contact_data.message"
+            v-model="contactData.message"
             :rules="rules.requiredRule"
             placeholder="message"
             label="message"
@@ -210,10 +210,36 @@ export default {
   },
   methods: {
     ...mapActions(['toogleAlertBox']),
-    goWhatsapp () {
-      const url = "https://wa.me/+254720244744?text=I'm%20interested%20in%20your%20land%20for%20sale"
+    call () {
+      const url = 'tel: +254720244744'
       window.open(url, '_blank')
     },
+
+    goEmail () {
+      const url = 'mailto:Info@adilirealestate.com'
+      window.open(url, '_blank')
+    },
+
+    goSMS () {
+      const url = 'sms: +254720244744'
+      window.open(url, '_blank')
+    },
+
+    goWhatsApp () {
+      const url = 'https://wa.me/+254720244744?text=I%20am%20interested%20in%20your%20land%20for%20sale'
+      window.open(url, '_blank')
+    },
+
+    goFacebook () {
+      const url = 'https://www.facebook.com/AdiliRealEstate/'
+      window.open(url, '_blank')
+    },
+
+    goTwitter () {
+      const url = 'https://www.twitter.com/AdiliRealEstate/'
+      window.open(url, '_blank')
+    },
+
     enquire () {
       try {
         this.enquireLoading = true
@@ -223,6 +249,7 @@ export default {
       } catch (e) {
       }
     },
+
     book () {
       try {
         this.bookLoading = true
