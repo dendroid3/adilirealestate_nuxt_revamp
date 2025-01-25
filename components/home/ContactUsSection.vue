@@ -178,7 +178,7 @@
             {{ "We will get back to you via email or SMS in the shortest time" }}
           </p>
           <div class="d-flex justify-end">
-            <v-btn class="success" :disabled="!enquiryValid" :loading="enquire_loading" @click="enquire">
+            <v-btn class="success" @click="enquire">
               send
             </v-btn>
           </div>
