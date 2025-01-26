@@ -6,7 +6,7 @@
       .
     </v-row>
     <div style="padding-bottom: 5rem;" class="blue footer-wrapper mt-4">
-      <v-row class="white mt-4 pt-4">
+      <!-- <v-row class="white mt-4 pt-4">
         <v-col class="d-flex justify-center col-12 col-md-12 col-sm-12 col-xs-12 offset-0 offset-md-0 offset-sm-0 offset-xs-0">
           <div>
             <h3 class="text-center sub-heading">
@@ -34,7 +34,7 @@
             </div>
           </div>
         </v-col>
-      </v-row>
+      </v-row> -->
 
       <v-row class="blue pa-4 white--text">
         <v-col class="col-12 col-md-3 d-flex justify-center footer-block">
@@ -280,11 +280,11 @@ export default {
     goSMS () {
       const url = 'sms: +254720244744'
       window.open(url, '_blank')
-    },
-
-    subscribe () {
-      console.log('Hello')
     }
+
+    // subscribe () {
+    //   console.log('Hello')
+    // }
 
   }
 }

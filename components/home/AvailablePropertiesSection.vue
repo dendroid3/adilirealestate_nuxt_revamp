@@ -38,7 +38,7 @@
         </ul>
         <div class="rounded blue lighten-3 pa-4">
           <p class="text-h4 text-bold">
-            Got more questions? Are you interested in this property?
+            Make this paradise your home. Contact us today to secure your plot!
           </p>
 
           <v-dialog
@@ -48,7 +48,7 @@
           >
             <template #activator="{ on, attrs }">
               <v-btn
-                class="block white--text success"
+                class="block white--text red"
                 dark
                 v-bind="attrs"
                 v-on="on"

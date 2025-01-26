@@ -6,7 +6,7 @@
       <v-col class="col-12 col-md-6 offset-md-3">
         <div class="bold blue--text d-flex text-center justify-center animate__animated animate__zoomIn heading" style="width:100%;">
           <p class="d-flex justify-center text--center heading">
-            Affordable Plots Within Diani
+            Why choose Adili Real Estate?
           </p>
         </div>
         <div class="d-flex justify-center" style="width:100%;">

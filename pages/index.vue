@@ -14,7 +14,7 @@
 
     <faqs-section />
 
-    <contact-us-section />
+    <!-- <contact-us-section /> -->
   </div>
 </template>
 
@@ -25,7 +25,7 @@ import HowToBuySection from '../components/home/HowToBuySection.vue'
 import BlogsSection from '../components/home/BlogsSection.vue'
 import FaqsSection from '../components/home/FaqsSection.vue'
 import AvailablePropertiesSection from '../components/home/AvailablePropertiesSection.vue'
-import ContactUsSection from '../components/home/ContactUsSection.vue'
+// import ContactUsSection from '../components/home/ContactUsSection.vue'
 import PropertiesSection from '../components/home/PropertiesSection.vue'
 
 export default {
@@ -38,8 +38,8 @@ export default {
     BlogsSection,
     FaqsSection,
     AvailablePropertiesSection,
-    PropertiesSection,
-    ContactUsSection
+    PropertiesSection
+    // ContactUsSection
   },
 
   head () {

@@ -6,13 +6,13 @@
     <v-row>
       <v-col class="col-12 col-md-10 offset-md-1">
         <v-row class="px-2 d-flex justify-center">
-          <v-col class="col-12 col-md-4">
+          <v-col class="col-12">
             <diani-sunrise-two />
           </v-col>
-          <v-col class="col-12 col-md-4">
+          <v-col class="col-12">
             <diani-sunrise />
           </v-col>
-          <v-col class="col-12 col-md-4">
+          <v-col class="col-12">
             <diani-crystal />
           </v-col>
         </v-row>
