@@ -9,14 +9,14 @@
         v-show="counter < 3"
         class="rounded banner-image  lighten-4 ma-0 pointer animate__animated animate__fadeIn"
         contain
-        :src="require(`../../assets/banners/01.jpeg`)"
+        :src="require(`../../assets/banners/01.jpg`)"
         @click="goSunrise"
       />
 
       <v-img
         v-show="counter == 3"
         class="rounded banner-image lighten-4 ma-0 pointer animate__animated animate__fadeIn"
-        :src="require(`../../assets/banners/02.png`)"
+        :src="require(`../../assets/banners/02.jpg`)"
         @click="goSunrise"
       />
 
@@ -24,7 +24,7 @@
         v-show="counter == 4"
         class="rounded banner-image lighten-4 ma-0 pointer animate__animated animate__fadeIn"
         contain
-        :src="require(`../../assets/banners/03.png`)"
+        :src="require(`../../assets/banners/03.jpg`)"
         @click="goSunrise"
       />
 
@@ -32,7 +32,7 @@
         v-show="counter == 5"
         class="rounded banner-image lighten-4 ma-0 pointer animate__animated animate__fadeIn"
         contain
-        :src="require(`../../assets/banners/04.png`)"
+        :src="require(`../../assets/banners/04.jpg`)"
         @click="goSunrise"
       />
 
@@ -40,7 +40,7 @@
         v-show="counter == 6"
         class="rounded banner-image lighten-4 ma-0 pointer animate__animated animate__fadeIn"
         contain
-        :src="require(`../../assets/banners/05.png`)"
+        :src="require(`../../assets/banners/05.jpg`)"
         @click="goSunrise"
       />
 
@@ -49,10 +49,10 @@
         class="pa-2 d-flex justify-center inner-text"
       >
         <div class="blue white--text rounded pa-1">
-          <div>
+          <!-- <div>
             Our show house is under construction in Pazurina’s maiden project, the Pazurina golf resort! With plots 99% sold out, this project is a true definition of Pazurina’s dedication to delivering real estate investment dreams.
             Our show house is under construction in Pazurina’s maiden project, the Pazurina golf resort! With plots 99% sold out, this project is a true definition of Pazurina’s dedication to delivering real estate investment dreams.
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -88,7 +88,7 @@ export default {
 
   methods: {
     goSunrise () {
-      this.$router.push('/property/diani-sunrise-estate')
+      this.$router.push('/property/diani-twins-courts')
     }
   }
 }

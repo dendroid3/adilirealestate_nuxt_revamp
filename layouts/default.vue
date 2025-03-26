@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <nav-bar />
-    <v-main>
+    <v-main class="wrapper">
       <div id="appContainer">
         <Nuxt />
       </div>
@@ -212,4 +212,9 @@ a{
 .pale-blue{
   background-color: #48aaf912;
 }
+
+.wrapper{
+  z-index: 1;
+}
+
 </style>

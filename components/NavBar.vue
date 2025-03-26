@@ -23,6 +23,7 @@
     </div>
 
     <v-app-bar
+      id="appBar"
       flat
       color="white"
     >
@@ -145,10 +146,10 @@
             v-show="showMenu"
             class="white menu"
           >
-            <v-list-item-group>
+            <v-list-item-group class="white">
               <v-list-item
-                class="d-flex justify-center pr-0 my-1"
-                @click="goToPage('home')"
+                class="white d-flex justify-center pr-0 my-1"
+                @click="goToPage('/')"
               >
                 <v-list-item-title>
                   {{ "HOME" }}
@@ -156,8 +157,8 @@
               </v-list-item>
 
               <v-list-item
-                class="d-flex justify-center pr-0 my-1"
-                @click="goToPage('about')"
+                class="white d-flex justify-center pr-0 my-1"
+                @click="goToPage('/about')"
               >
                 <v-list-item-title>
                   {{ "ABOUT" }}
@@ -165,8 +166,8 @@
               </v-list-item>
 
               <v-list-item
-                class="d-flex justify-center pr-0 my-1"
-                @click="goToPage('properties')"
+                class="white d-flex justify-center pr-0 my-1"
+                @click="goToPage('/properties')"
               >
                 <v-list-item-title>
                   {{ "PROPERTIES" }}
@@ -174,8 +175,8 @@
               </v-list-item>
 
               <v-list-item
-                class="d-flex justify-center pr-0 my-1"
-                @click="goToPage('how-to-buy')"
+                class="white d-flex justify-center pr-0 my-1"
+                @click="goToPage('/how-to-buy')"
               >
                 <v-list-item-title>
                   {{ "HOW TO BUY" }}
@@ -183,8 +184,8 @@
               </v-list-item>
 
               <v-list-item
-                class="d-flex justify-center pr-0 my-1"
-                @click="goToPage('faqs')"
+                class="white d-flex justify-center pr-0 my-1"
+                @click="goToPage('/faqs')"
               >
                 <v-list-item-title>
                   {{ "FAQ" }}
@@ -192,8 +193,8 @@
               </v-list-item>
 
               <v-list-item
-                class="d-flex justify-center pr-0 my-1"
-                @click="goToPage('contact')"
+                class="white d-flex justify-center pr-0 my-1"
+                @click="goToPage('/contact')"
               >
                 <v-list-item-title>
                   {{ "CONTACT US" }}
@@ -258,16 +259,20 @@ export default {
     top: 0;
     right: 0;
     left: 0;
-    overflow-y: hidden;
-    overflow-x: hidden;
   }
 
   .menu{
     position: absolute;
     right: 0rem;
     left: 0rem;
+    bottom: 0;
     top: 3.5rem;
     z-index: 999;
+    padding: 0;
+  }
+
+  #appBar{
+    position: relative;
   }
 
 </style>

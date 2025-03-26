@@ -12,7 +12,7 @@
       </v-col>
       <v-col class="col-12 text-center blue--text d-flex flex-wrap pa-0 justify-center" style="white-space: nowrap;">
         <p class="d-flex justify-center text--center blue--text heading ma-0">
-          Project Name
+          Diani Twins Court
         </p>
       </v-col>
       <v-col class="col-12">
@@ -21,24 +21,76 @@
             class="rounded lighten-4 ma-0 pointer animate__animated animate__fadeIn property-image"
             contain
             :aspect-ratio="2/1"
-            :src="require(`@/assets/new_project/01.png`)"
+            :src="require(`@/assets/new_project/01.jpg`)"
+          >
+            <p style="position: absolute; bottom: 0; left: 50%; transform: translate(-50%, -50%); font-size: 1.5rem; color: white; padding: 0.15rem; background: red; border-radius: 10px;">
+              650,000 KES
+            </p>
+          </v-img>
+        </div>
+      </v-col>
+    </v-row>
+    <v-row class="mb-4 no-gutters">
+      <v-col class="col-6 mb-4">
+        <div class="pa-0">
+          <v-img
+            class="rounded lighten-4 ma-0 pointer animate__animated animate__fadeIn"
+            contain
+            :aspect-ratio="2/1"
+            :src="require(`@/assets/new_project/00.jpg`)"
           />
         </div>
       </v-col>
+      <v-col class="col-6 mb-4">
+        <div class="pa-0">
+          <v-img
+            class="rounded lighten-4 ma-0 pointer animate__animated animate__fadeIn"
+            contain
+            :aspect-ratio="2/1"
+            :src="require(`@/assets/new_project/02.jpg`)"
+          />
+        </div>
+      </v-col>
+      <v-col class="col-6 mb-4">
+        <div class="pa-0">
+          <v-img
+            class="rounded lighten-4 ma-0 pointer animate__animated animate__fadeIn"
+            contain
+            :aspect-ratio="2/1"
+            :src="require(`@/assets/new_project/03.jpg`)"
+          />
+        </div>
+      </v-col>
+      <v-col class="col-6 mb-4">
+        <div class="pa-0">
+          <v-img
+            class="rounded lighten-4 ma-0 pointer animate__animated animate__fadeIn"
+            contain
+            :aspect-ratio="2/1"
+            :src="require(`@/assets/new_project/04.jpg`)"
+          />
+        </div>
+      </v-col>
+    </v-row>
+    <v-row class="mb-4">
       <v-col class="col-12 col-md-10 offset-md-1 text-center">
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore eius quis incidunt repudiandae magnam adipisci voluptatem expedita quo nemo provident, molestias placeat ipsum vel magni doloribus repellat? Molestiae, quasi. Esse, error autem? Nam, facilis. Cum similique rem earum quam impedit, officia labore sint non in dolor nostrum. Quidem, rerum dolores.
+          Diani Twins Court is an exclusive gated estate nestled in a thriving neighborhood just 4km from Diani beach- Africa's leading beach destination. The property boasts of a 1km direct access from Lunga Lunga Highway offering unmatched accessibility. Diani Twins Court is conveniently located close to key Diani amenities such as Diani Market, Diani Shopping Center & Diani Airport immersing you into the magical Diani lifestyle.
+        </p>
+        <p>
+          Whether you are looking to build a holiday home or retirement home, Diani Twins Court is the perfect place for you. Buy & Live where others vacation.
         </p>
         <ul class="text-center">
-          <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
-          <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
-          <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
-          <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
-          <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+          <li>✅4KM to the beach</li>
+          <li>✅1KM off Lunga-Lunga highway</li>
+          <li>✅15mins from Diani Airport</li>
+          <li>✅Value Added Gated Community </li>
+          <li>✅Serene, Fast Developing Neighborhood</li>
+          <li>✅Near key social amenities & 5 star resorts</li>
         </ul>
         <div class="rounded blue lighten-3 pa-4">
           <p class="text-h4 text-bold">
-            Make this paradise your home. Contact us today to secure your plot!
+            {{ "Buy & Live where others vacation. Contact us today to secure your plot" }}
           </p>
 
           <v-dialog
@@ -48,12 +100,19 @@
           >
             <template #activator="{ on, attrs }">
               <v-btn
-                class="block white--text red"
+                class="white--text red"
                 dark
                 v-bind="attrs"
                 v-on="on"
               >
                 Get in Touch
+              </v-btn>
+              <v-btn
+                class="white--text green"
+                dark
+                @click="viewDianiTwinsCourts"
+              >
+                View
               </v-btn>
             </template>
             <v-card>
@@ -138,6 +197,10 @@ export default {
   },
 
   methods: {
+    viewDianiTwinsCourts () {
+      this.$router.push('/property/diani-twins-courts')
+    },
+
     call () {
       const url = 'tel: +254720244744'
       window.open(url, '_blank')
@@ -177,5 +240,6 @@ export default {
 
  ul {
   list-style-position: inside;
+  list-style-type: none;
  }
 </style>
