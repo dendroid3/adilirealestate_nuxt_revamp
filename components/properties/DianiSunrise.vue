@@ -13,14 +13,18 @@
             style="position: relative;"
             contain
             :aspect-ratio="2/1"
-            :src="require(`@/assets/diani_sunrise/1.png`)"
+            :src="require(`@/assets/diani_sunrise/${current_image_source}`)"
           />
         </div>
       </v-col>
     </v-row>
     <v-row class="mb-4 no-gutters">
-      <v-col class="col-6 mb-4">
-        <div class="px-4">
+      <v-col class="col-2 offset-1 mb-4">
+        <div
+          class="px-4 red rounded mx-2"
+          :class="{'lighten-4': (current_image_source !== '0.png')}"
+          @click="changeImageSource('0.png')"
+        >
           <v-img
             class="rounded lighten-4 ma-0 pointer animate__animated animate__fadeIn"
             contain
@@ -29,8 +33,26 @@
           />
         </div>
       </v-col>
-      <v-col class="col-6 mb-4">
-        <div class="px-4">
+      <v-col class="col-2 mb-4">
+        <div
+          class="px-4 red rounded mx-2"
+          :class="{'lighten-4': (current_image_source !== '1.png')}"
+          @click="changeImageSource('1.png')"
+        >
+          <v-img
+            class="rounded lighten-4 ma-0 pointer animate__animated animate__fadeIn"
+            contain
+            :aspect-ratio="2/1"
+            :src="require(`@/assets/diani_sunrise/1.png`)"
+          />
+        </div>
+      </v-col>
+      <v-col class="col-2 mb-4">
+        <div
+          class="px-4 red rounded mx-2"
+          :class="{'lighten-4': (current_image_source !== '2.png')}"
+          @click="changeImageSource('2.png')"
+        >
           <v-img
             class="rounded lighten-4 ma-0 pointer animate__animated animate__fadeIn"
             contain
@@ -39,8 +61,12 @@
           />
         </div>
       </v-col>
-      <v-col class="col-6 mb-4">
-        <div class="px-4">
+      <v-col class="col-2 mb-4">
+        <div
+          class="px-4 red rounded mx-2"
+          :class="{'lighten-4': (current_image_source !== '3.png')}"
+          @click="changeImageSource('3.png')"
+        >
           <v-img
             class="rounded lighten-4 ma-0 pointer animate__animated animate__fadeIn"
             contain
@@ -49,8 +75,12 @@
           />
         </div>
       </v-col>
-      <v-col class="col-6 mb-4">
-        <div class="px-4">
+      <v-col class="col-2 mb-4">
+        <div
+          class="px-4 red rounded mx-2"
+          :class="{'lighten-4': (current_image_source !== '4.png')}"
+          @click="changeImageSource('4.png')"
+        >
           <v-img
             class="rounded lighten-4 ma-0 pointer animate__animated animate__fadeIn"
             contain
@@ -75,7 +105,19 @@
 </template>
 <script>
 export default {
-  name: 'DianiSunrise'
+  name: 'DianiSunrise',
+
+  data () {
+    return {
+      current_image_source: '0.png'
+    }
+  },
+
+  methods: {
+    changeImageSource (source) {
+      this.current_image_source = String(source)
+    }
+  }
 }
 </script>
 

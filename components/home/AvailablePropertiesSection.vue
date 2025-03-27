@@ -18,10 +18,10 @@
       <v-col class="col-12">
         <div class="pa-0 image-div">
           <v-img
-            class="rounded lighten-4 ma-0 pointer animate__animated animate__fadeIn property-image"
+            class="rounded ma-0 pointer animate__animated animate__fadeIn property-image"
             contain
             :aspect-ratio="2/1"
-            :src="require(`@/assets/new_project/01.jpg`)"
+            :src="require(`@/assets/new_project/${current_image_source}`)"
           >
             <p style="position: absolute; bottom: 0; left: 50%; transform: translate(-50%, -50%); font-size: 1.5rem; color: white; padding: 0.15rem; background: red; border-radius: 10px;">
               650,000 KES
@@ -30,44 +30,74 @@
         </div>
       </v-col>
     </v-row>
-    <v-row class="mb-4 no-gutters">
-      <v-col class="col-6 mb-4">
-        <div class="pa-0">
+    <v-row class="mb-4 no-gutters d-flex justify-center">
+      <v-col class="col-2 mb-4">
+        <div
+          class="px-4 red rounded mx-2"
+          :class="{'lighten-4': (current_image_source !== '00.png')}"
+          @click="changeImageSource('00.png')"
+        >
           <v-img
-            class="rounded lighten-4 ma-0 pointer animate__animated animate__fadeIn"
+            class="rounded ma-0 pointer animate__animated animate__fadeIn"
             contain
             :aspect-ratio="2/1"
-            :src="require(`@/assets/new_project/00.jpg`)"
+            :src="require(`@/assets/new_project/00.png`)"
           />
         </div>
       </v-col>
-      <v-col class="col-6 mb-4">
-        <div class="pa-0">
+      <v-col class="col-2 mb-4">
+        <div
+          class="px-4 red rounded mx-2"
+          :class="{'lighten-4': (current_image_source !== '01.PNG')}"
+          @click="changeImageSource('01.PNG')"
+        >
           <v-img
-            class="rounded lighten-4 ma-0 pointer animate__animated animate__fadeIn"
+            class="rounded ma-0 pointer animate__animated animate__fadeIn"
             contain
             :aspect-ratio="2/1"
-            :src="require(`@/assets/new_project/02.jpg`)"
+            :src="require(`@/assets/new_project/01.PNG`)"
           />
         </div>
       </v-col>
-      <v-col class="col-6 mb-4">
-        <div class="pa-0">
+      <v-col class="col-2 mb-4">
+        <div
+          class="px-4 red rounded mx-2"
+          :class="{'lighten-4': (current_image_source !== '02.PNG')}"
+          @click="changeImageSource('02.PNG')"
+        >
           <v-img
-            class="rounded lighten-4 ma-0 pointer animate__animated animate__fadeIn"
+            class="rounded ma-0 pointer animate__animated animate__fadeIn"
             contain
             :aspect-ratio="2/1"
-            :src="require(`@/assets/new_project/03.jpg`)"
+            :src="require(`@/assets/new_project/02.PNG`)"
           />
         </div>
       </v-col>
-      <v-col class="col-6 mb-4">
-        <div class="pa-0">
+      <v-col class="col-2 mb-4">
+        <div
+          class="px-4 red rounded mx-2"
+          :class="{'lighten-4': (current_image_source !== '03.PNG')}"
+          @click="changeImageSource('03.PNG')"
+        >
           <v-img
-            class="rounded lighten-4 ma-0 pointer animate__animated animate__fadeIn"
+            class="rounded ma-0 pointer animate__animated animate__fadeIn"
             contain
             :aspect-ratio="2/1"
-            :src="require(`@/assets/new_project/04.jpg`)"
+            :src="require(`@/assets/new_project/03.PNG`)"
+          />
+        </div>
+      </v-col>
+      <v-col class="col-2 mb-4">
+        <div
+          class="px-4 red rounded mx-2"
+          :class="{'lighten-4': (current_image_source !== '04.PNG')}"
+          @click="changeImageSource('04.PNG')"
+        >
+          <v-img
+            class="rounded ma-0 pointer animate__animated animate__fadeIn"
+            contain
+            :aspect-ratio="2/1"
+            :src="require(`@/assets/new_project/04.PNG`)"
           />
         </div>
       </v-col>
@@ -192,11 +222,16 @@ export default {
 
   data () {
     return {
-      dialog: false
+      dialog: false,
+      current_image_source: '00.png'
     }
   },
 
   methods: {
+    changeImageSource (source) {
+      this.current_image_source = String(source)
+    },
+
     viewDianiTwinsCourts () {
       this.$router.push('/property/diani-twins-courts')
     },

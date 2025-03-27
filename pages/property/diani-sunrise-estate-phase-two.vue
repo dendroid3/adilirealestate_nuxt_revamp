@@ -6,39 +6,39 @@
     <v-row class="no-gutters mb-3">
       <v-col class="col-8  pa-4" style="border-right: solid 3px white;">
         <v-img
-          v-if="img_source == '0.jpg'"
+          v-if="img_source == '0.png'"
           class="img rounded lighten-4 ma-0"
           contain
           :aspect-ratio="2/1"
-          :src="require(`@/assets/sunrise_phase_2/1.jpg`)"
+          :src="require(`@/assets/sunrise_phase_2/1.png`)"
         />
         <v-img
-          v-if="img_source == '1.jpg'"
+          v-if="img_source == '1.png'"
           class="img rounded lighten-4 ma-0"
           contain
           :aspect-ratio="2/1"
-          :src="require(`@/assets/sunrise_phase_2/2.jpg`)"
+          :src="require(`@/assets/sunrise_phase_2/2.png`)"
         />
         <v-img
-          v-if="img_source == '2.jpg'"
+          v-if="img_source == '2.png'"
           class="img rounded lighten-4 ma-0"
           contain
           :aspect-ratio="2/1"
-          :src="require(`@/assets/sunrise_phase_2/3.jpg`)"
+          :src="require(`@/assets/sunrise_phase_2/3.png`)"
         />
         <v-img
-          v-if="img_source == '3.jpg'"
+          v-if="img_source == '3.png'"
           class="img rounded lighten-4 ma-0"
           contain
           :aspect-ratio="2/1"
-          :src="require(`@/assets/sunrise_phase_2/4.jpg`)"
+          :src="require(`@/assets/sunrise_phase_2/4.png`)"
         />
         <v-img
-          v-if="img_source == '4.jpg'"
+          v-if="img_source == '4.png'"
           class="img rounded lighten-4 ma-0"
           contain
           :aspect-ratio="2/1"
-          :src="require(`@/assets/sunrise_phase_2/5.jpg`)"
+          :src="require(`@/assets/sunrise_phase_2/5.png`)"
         />
         <div>
           <span class="d-flex white align-center red rounded justimmfy-center black--text">
@@ -54,57 +54,57 @@
           <v-img
             class="rounded  mx-1"
             :class="{
-              'red': img_source == '5.jpg'
+              'red': img_source == '5.png'
             }"
             contain
-            :width="40"
-            :height="20"
-            :src="require(`@/assets/sunrise_phase_2/5.jpg`)"
-            @click="changeSource('0.jpg')"
+            :width="$vuetify.breakpoint.smAndDown ? 100 : 40"
+            :height="$vuetify.breakpoint.smAndDown ? 50 : 20"
+            :src="require(`@/assets/sunrise_phase_2/5.png`)"
+            @click="changeSource('0.png')"
           />
           <v-img
             class="rounded mx-1"
             :class="{
-              'red': img_source == '1.jpg'
+              'red': img_source == '1.png'
             }"
             contain
-            :width="40"
-            :height="20"
-            :src="require(`@/assets/sunrise_phase_2/1.jpg`)"
-            @click="changeSource('1.jpg')"
+            :width="$vuetify.breakpoint.smAndDown ? 100 : 40"
+            :height="$vuetify.breakpoint.smAndDown ? 50 : 20"
+            :src="require(`@/assets/sunrise_phase_2/1.png`)"
+            @click="changeSource('1.png')"
           />
           <v-img
             class="rounded mx-1"
             :class="{
-              'red': img_source == '2.jpg'
+              'red': img_source == '2.png'
             }"
             contain
-            :width="40"
-            :height="20"
-            :src="require(`@/assets/sunrise_phase_2/2.jpg`)"
-            @click="changeSource('2.jpg')"
+            :width="$vuetify.breakpoint.smAndDown ? 100 : 40"
+            :height="$vuetify.breakpoint.smAndDown ? 50 : 20"
+            :src="require(`@/assets/sunrise_phase_2/2.png`)"
+            @click="changeSource('2.png')"
           />
           <v-img
             class="rounded mx-1"
             :class="{
-              'red': img_source == '3.jpg'
+              'red': img_source == '3.png'
             }"
             contain
-            :width="40"
-            :height="20"
-            :src="require(`@/assets/sunrise_phase_2/3.jpg`)"
-            @click="changeSource('3.jpg')"
+            :width="$vuetify.breakpoint.smAndDown ? 100 : 40"
+            :height="$vuetify.breakpoint.smAndDown ? 50 : 20"
+            :src="require(`@/assets/sunrise_phase_2/3.png`)"
+            @click="changeSource('3.png')"
           />
           <v-img
             class="rounded mx-1"
             :class="{
-              'red': img_source == '4.jpg'
+              'red': img_source == '4.png'
             }"
             contain
-            :width="40"
-            :height="20"
-            :src="require(`@/assets/sunrise_phase_2/4.jpg`)"
-            @click="changeSource('4.jpg')"
+            :width="$vuetify.breakpoint.smAndDown ? 100 : 40"
+            :height="$vuetify.breakpoint.smAndDown ? 50 : 20"
+            :src="require(`@/assets/sunrise_phase_2/4.png`)"
+            @click="changeSource('4.png')"
           />
         </v-col>
         <!-- <v-col class="col-12 px-4 text--bold" style="font-weight: 900;">
@@ -221,7 +221,7 @@
             {{ "We will get back to you via email or SMS in the shortest time" }}
           </p>
           <div class="d-flex justify-end">
-            <v-btn class="success" :disabled="!enquiryValid" :loading="enquire_loading" @click="enquireMethod">
+            <v-btn class="success" :disabled="!enquiryValid" :loading="enquire_loading">
               send
             </v-btn>
           </div>
@@ -305,7 +305,7 @@ export default {
       },
       book_data: {},
       book_loading: false,
-      img_source: 'sunrise_0.jpg',
+      img_source: 'sunrise_0.png',
       counter: [1, 2, 3],
       enquire: true,
       enquire_loading: false,
@@ -350,28 +350,6 @@ export default {
     ...mapActions(['toogleAlertBox']),
     changeSource (code) {
       this.img_source = code
-    },
-    enquireMethod () {
-      try {
-        // this.enquire_loading = true
-        // const response = await
-        // axios.post(process.env.VUE_APP_API + '/api/enquire', this.contact_data).then((response) => {
-        //   console.log(response)
-        //   const alertBoxInfo = {
-        //     status: true,
-        //     information: 'Enquiry recorded successfully, we shall get in touch as soon as possible.',
-        //     code: 'success'
-        //   }
-        //   this.toogleAlertBox(alertBoxInfo)
-        //   this.contact_data = {
-        //     subject: '#Diani Crystal Garden'
-        //   }
-        //   this.enquire_loading = false
-        // })
-        console.log('response')
-      } catch (e) {
-        console.log(e)
-      }
     }
   }
 }

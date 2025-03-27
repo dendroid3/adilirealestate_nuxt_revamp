@@ -9,53 +9,116 @@
       <v-col class="col-12 d-flex justify-center text-center blue--text flex-wrap pa-0 justify-center">
         <div class="pa-0 image-div">
           <v-img
+            v-if="current_image_source == '1.PNG'"
             class="rounded lighten-4 ma-0 pointer animate__animated animate__fadeIn property-image"
             style="position: relative;"
             contain
             :aspect-ratio="2/1"
-            :src="require(`@/assets/sunrise_phase_2/1.jpg`)"
+            :src="require(`@/assets/sunrise_phase_2/1.PNG`)"
+          />
+          <v-img
+            v-if="current_image_source == '2.PNG'"
+            class="rounded lighten-4 ma-0 pointer animate__animated animate__fadeIn property-image"
+            style="position: relative;"
+            contain
+            :aspect-ratio="2/1"
+            :src="require(`@/assets/sunrise_phase_2/2.PNG`)"
+          />
+          <v-img
+            v-if="current_image_source == '3.PNG'"
+            class="rounded lighten-4 ma-0 pointer animate__animated animate__fadeIn property-image"
+            style="position: relative;"
+            contain
+            :aspect-ratio="2/1"
+            :src="require(`@/assets/sunrise_phase_2/3.PNG`)"
+          />
+          <v-img
+            v-if="current_image_source == '4.PNG'"
+            class="rounded lighten-4 ma-0 pointer animate__animated animate__fadeIn property-image"
+            style="position: relative;"
+            contain
+            :aspect-ratio="2/1"
+            :src="require(`@/assets/sunrise_phase_2/4.PNG`)"
+          />
+          <v-img
+            v-if="current_image_source == '5.PNG'"
+            class="rounded lighten-4 ma-0 pointer animate__animated animate__fadeIn property-image"
+            style="position: relative;"
+            contain
+            :aspect-ratio="2/1"
+            :src="require(`@/assets/sunrise_phase_2/5.PNG`)"
           />
         </div>
       </v-col>
     </v-row>
     <v-row class="mb-4 no-gutters">
-      <v-col class="col-6 mb-4">
-        <div class="pa-0">
+      <v-col class="offset-1 col-2 mb-4">
+        <div
+          class="px-4 red rounded mx-2"
+          :class="{'lighten-4': (current_image_source !== '1.PNG')}"
+          @click="changeImageSource('1.PNG')"
+        >
           <v-img
             class="rounded lighten-4 ma-0 pointer animate__animated animate__fadeIn"
             contain
             :aspect-ratio="2/1"
-            :src="require(`@/assets/sunrise_phase_2/5.jpg`)"
+            :src="require(`@/assets/sunrise_phase_2/1.PNG`)"
           />
         </div>
       </v-col>
-      <v-col class="col-6 mb-4">
-        <div class="pa-0">
+      <v-col class="col-2 mb-4">
+        <div
+          class="px-4 red rounded mx-2"
+          :class="{'lighten-4': (current_image_source !== '5.PNG')}"
+          @click="changeImageSource('5.PNG')"
+        >
           <v-img
             class="rounded lighten-4 ma-0 pointer animate__animated animate__fadeIn"
             contain
             :aspect-ratio="2/1"
-            :src="require(`@/assets/sunrise_phase_2/2.jpg`)"
+            :src="require(`@/assets/sunrise_phase_2/5.PNG`)"
           />
         </div>
       </v-col>
-      <v-col class="col-6 mb-4">
-        <div class="pa-0">
+      <v-col class="col-2 mb-4">
+        <div
+          class="px-4 red rounded mx-2"
+          :class="{'lighten-4': (current_image_source !== '2.PNG')}"
+          @click="changeImageSource('2.PNG')"
+        >
           <v-img
             class="rounded lighten-4 ma-0 pointer animate__animated animate__fadeIn"
             contain
             :aspect-ratio="2/1"
-            :src="require(`@/assets/sunrise_phase_2/3.jpg`)"
+            :src="require(`@/assets/sunrise_phase_2/2.PNG`)"
           />
         </div>
       </v-col>
-      <v-col class="col-6 mb-4">
-        <div class="pa-0">
+      <v-col class="col-2 mb-4">
+        <div
+          class="px-4 red rounded mx-2"
+          :class="{'lighten-4': (current_image_source !== '3.PNG')}"
+          @click="changeImageSource('3.PNG')"
+        >
           <v-img
             class="rounded lighten-4 ma-0 pointer animate__animated animate__fadeIn"
             contain
             :aspect-ratio="2/1"
-            :src="require(`@/assets/sunrise_phase_2/4.jpg`)"
+            :src="require(`@/assets/sunrise_phase_2/3.PNG`)"
+          />
+        </div>
+      </v-col>
+      <v-col class="col-2 mb-4">
+        <div
+          class="px-4 red rounded mx-2"
+          :class="{'lighten-4': (current_image_source !== '4.PNG')}"
+          @click="changeImageSource('4.PNG')"
+        >
+          <v-img
+            class="rounded lighten-4 ma-0 pointer animate__animated animate__fadeIn"
+            contain
+            :aspect-ratio="2/1"
+            :src="require(`@/assets/sunrise_phase_2/4.PNG`)"
           />
         </div>
       </v-col>
@@ -75,7 +138,19 @@
 </template>
 <script>
 export default {
-  name: 'DianiSunriseTwo'
+  name: 'DianiSunriseTwo',
+
+  data () {
+    return {
+      current_image_source: '1.PNG'
+    }
+  },
+
+  methods: {
+    changeImageSource (source) {
+      this.current_image_source = String(source)
+    }
+  }
 }
 </script>
 

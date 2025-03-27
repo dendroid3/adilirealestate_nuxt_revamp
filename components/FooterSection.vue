@@ -281,11 +281,6 @@ export default {
       const url = 'sms: +254720244744'
       window.open(url, '_blank')
     }
-
-    // subscribe () {
-    //   console.log('Hello')
-    // }
-
   }
 }
 </script>

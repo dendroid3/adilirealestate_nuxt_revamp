@@ -51,20 +51,22 @@ export default {
 <style>
 html{
   width: 100vw;
-  overflow: auto;
-  font-family: 'Poppins', sans-serif;
-
+  overflow-y: auto;
+  overflow-x: hidden;
+  font-family: 'Poppins' !important;
 }
 #app{
   padding: 0;
   margin: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins' !important;
 }
 
 body{
   overflow-y: auto;
+  overflow-x: hidden;
   height: 100vh;
   pointer-events: auto;
+  font-family: 'Poppins' !important;
 }
 
 .heading{

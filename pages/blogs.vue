@@ -43,12 +43,6 @@ export default {
     BlogCard
   },
 
-  head () {
-    return {
-      title: 'Blogs and Tips'
-    }
-  },
-
   data: () => {
     return {
       blogs: [
@@ -88,6 +82,12 @@ export default {
           url: 'process-of-buying-land'
         }
       ]
+    }
+  },
+
+  head () {
+    return {
+      title: 'Blogs and Tips'
     }
   },
 

@@ -19,46 +19,46 @@
 
       <v-col class="col-md-8 offset-md-2 col-12 pa-4" style="border-right: solid 3px white;">
         <v-img
-          v-if="img_source == '00.jpg'"
+          v-if="img_source == '00.png'"
           class="img rounded lighten-4 ma-0"
           contain
           :aspect-ratio="2/1"
-          :src="require(`@/assets/new_project/00.jpg`)"
+          :src="require(`@/assets/new_project/00.png`)"
         />
         <v-img
-          v-if="img_source == '01.jpg'"
+          v-if="img_source == '01.PNG'"
           class="img rounded lighten-4 ma-0"
           contain
           :aspect-ratio="2/1"
-          :src="require(`@/assets/new_project/01.jpg`)"
+          :src="require(`@/assets/new_project/01.PNG`)"
         />
         <v-img
-          v-if="img_source == '02.jpg'"
+          v-if="img_source == '02.PNG'"
           class="img rounded lighten-4 ma-0"
           contain
           :aspect-ratio="2/1"
-          :src="require(`@/assets/new_project/02.jpg`)"
+          :src="require(`@/assets/new_project/02.PNG`)"
         />
         <v-img
-          v-if="img_source == '03.jpg'"
+          v-if="img_source == '03.PNG'"
           class="img rounded lighten-4 ma-0"
           contain
           :aspect-ratio="2/1"
-          :src="require(`@/assets/new_project/03.jpg`)"
+          :src="require(`@/assets/new_project/03.PNG`)"
         />
         <v-img
-          v-if="img_source == '04.jpg'"
+          v-if="img_source == '04.PNG'"
           class="img rounded lighten-4 ma-0"
           contain
           :aspect-ratio="2/1"
-          :src="require(`@/assets/new_project/04.jpg`)"
+          :src="require(`@/assets/new_project/04.PNG`)"
         />
         <v-img
-          v-if="img_source == '05.jpg'"
+          v-if="img_source == '05.PNG'"
           class="img rounded lighten-4 ma-0"
           contain
           :aspect-ratio="2/1"
-          :src="require(`@/assets/new_project/05.jpg`)"
+          :src="require(`@/assets/new_project/05.PNG`)"
         />
         <div>
           <span class="d-flex white align-center red rounded justimmfy-center black--text">
@@ -70,72 +70,72 @@
           </span>
         </div>
 
-        <v-col class="col-12 d-flex justify-center ">
-          <v-img
-            class="rounded  mx-1"
+        <v-col class="col-12 d-flex justify-center">
+            <v-img
+            class="rounded red mx-1"
             :class="{
-              'red': img_source == '00.jpg'
+              'lighten-4': img_source !== '00.png'
             }"
             contain
-            :width="40"
-            :height="20"
-            :src="require(`@/assets/new_project/00.jpg`)"
-            @click="changeSource('00.jpg')"
+            :width="$vuetify.breakpoint.smAndDown ? 80 : 40"
+            :height="$vuetify.breakpoint.smAndDown ? 40 : 20"
+            :src="require(`@/assets/new_project/00.png`)"
+            @click="changeSource('00.png')"
+            />
+          <v-img
+            class="rounded red mx-1"
+            :class="{
+              'lighten-4': img_source !== '01.PNG'
+            }"
+            contain
+            :width="$vuetify.breakpoint.smAndDown ? 80 : 40"
+            :height="$vuetify.breakpoint.smAndDown ? 40 : 20"
+            :src="require(`@/assets/new_project/01.PNG`)"
+            @click="changeSource('01.PNG')"
           />
           <v-img
-            class="rounded mx-1"
+            class="rounded red mx-1"
             :class="{
-              'red': img_source == '01.jpg'
+              'lighten-4': img_source !== '02.PNG'
             }"
             contain
-            :width="40"
-            :height="20"
-            :src="require(`@/assets/new_project/01.jpg`)"
-            @click="changeSource('01.jpg')"
+            :width="$vuetify.breakpoint.smAndDown ? 80 : 40"
+            :height="$vuetify.breakpoint.smAndDown ? 40 : 20"
+            :src="require(`@/assets/new_project/02.PNG`)"
+            @click="changeSource('02.PNG')"
           />
           <v-img
-            class="rounded mx-1"
+            class="rounded red mx-1"
             :class="{
-              'red': img_source == '02.jpg'
+              'lighten-4': img_source !== '03.PNG'
             }"
             contain
-            :width="40"
-            :height="20"
-            :src="require(`@/assets/new_project/02.jpg`)"
-            @click="changeSource('02.jpg')"
+            :width="$vuetify.breakpoint.smAndDown ? 80 : 40"
+            :height="$vuetify.breakpoint.smAndDown ? 40 : 20"
+            :src="require(`@/assets/new_project/03.PNG`)"
+            @click="changeSource('03.PNG')"
           />
           <v-img
-            class="rounded mx-1"
+            class="rounded red mx-1"
             :class="{
-              'red': img_source == '03.jpg'
+              'lighten-4': img_source !== '04.PNG'
             }"
             contain
-            :width="40"
-            :height="20"
-            :src="require(`@/assets/new_project/03.jpg`)"
-            @click="changeSource('03.jpg')"
+            :width="$vuetify.breakpoint.smAndDown ? 80 : 40"
+            :height="$vuetify.breakpoint.smAndDown ? 40 : 20"
+            :src="require(`@/assets/new_project/04.PNG`)"
+            @click="changeSource('04.PNG')"
           />
           <v-img
-            class="rounded mx-1"
+            class="rounded red mx-1"
             :class="{
-              'red': img_source == '04.jpg'
+              'lighten-4': img_source !== '05.PNG'
             }"
             contain
-            :width="40"
-            :height="20"
-            :src="require(`@/assets/new_project/04.jpg`)"
-            @click="changeSource('04.jpg')"
-          />
-          <v-img
-            class="rounded mx-1"
-            :class="{
-              'red': img_source == '05.jpg'
-            }"
-            contain
-            :width="40"
-            :height="20"
-            :src="require(`@/assets/new_project/05.jpg`)"
-            @click="changeSource('05.jpg')"
+            :width="$vuetify.breakpoint.smAndDown ? 80 : 40"
+            :height="$vuetify.breakpoint.smAndDown ? 40 : 20"
+            :src="require(`@/assets/new_project/05.PNG`)"
+            @click="changeSource('05.PNG')"
           />
         </v-col>
         <!-- <v-col class="col-12 px-4 text--bold" style="font-weight: 900;">
@@ -213,7 +213,7 @@ export default {
       },
       book_data: {},
       book_loading: false,
-      img_source: '00.jpg',
+      img_source: '00.png',
       counter: [1, 2, 3],
       enquire: true,
       enquire_loading: false,
@@ -263,28 +263,6 @@ export default {
     ...mapActions(['toogleAlertBox']),
     changeSource (code) {
       this.img_source = code
-    },
-    enquireMethod () {
-      try {
-        // this.enquire_loading = true
-        // const response = await
-        // axios.post(process.env.VUE_APP_API + '/api/enquire', this.contact_data).then((response) => {
-        //   console.log(response)
-        //   const alert_box_info = {
-        //     status: true,
-        //     information: 'Enquiry recorded successfully, we shall get in touch as soon as possible.',
-        //     code: 'success'
-        //   }
-        //   this.toogleAlertBox(alert_box_info)
-        //   this.contact_data = {
-        //     subject: '#Diani Crystal Garden'
-        //   }
-        //   this.enquire_loading = false
-        // })
-        console.log('response')
-      } catch (e) {
-        console.log(e)
-      }
     }
   }
 }

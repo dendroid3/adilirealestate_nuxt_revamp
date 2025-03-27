@@ -57,8 +57,8 @@
               'red': img_source == '0.png'
             }"
             contain
-            :width="40"
-            :height="20"
+            :width="$vuetify.breakpoint.smAndDown ? 100 : 40"
+            :height="$vuetify.breakpoint.smAndDown ? 50 : 20"
             :src="require(`@/assets/diani_crystal/0.png`)"
             @click="changeSource('0.png')"
           />
@@ -68,8 +68,8 @@
               'red': img_source == '1.png'
             }"
             contain
-            :width="40"
-            :height="20"
+            :width="$vuetify.breakpoint.smAndDown ? 100 : 40"
+            :height="$vuetify.breakpoint.smAndDown ? 50 : 20"
             :src="require(`@/assets/diani_crystal/1.png`)"
             @click="changeSource('1.png')"
           />
@@ -79,8 +79,8 @@
               'red': img_source == '2.png'
             }"
             contain
-            :width="40"
-            :height="20"
+            :width="$vuetify.breakpoint.smAndDown ? 100 : 40"
+            :height="$vuetify.breakpoint.smAndDown ? 50 : 20"
             :src="require(`@/assets/diani_crystal/2.png`)"
             @click="changeSource('2.png')"
           />
@@ -90,8 +90,8 @@
               'red': img_source == '3.png'
             }"
             contain
-            :width="40"
-            :height="20"
+            :width="$vuetify.breakpoint.smAndDown ? 100 : 40"
+            :height="$vuetify.breakpoint.smAndDown ? 50 : 20"
             :src="require(`@/assets/diani_crystal/3.png`)"
             @click="changeSource('3.png')"
           />
@@ -101,8 +101,8 @@
               'red': img_source == '4.png'
             }"
             contain
-            :width="40"
-            :height="20"
+            :width="$vuetify.breakpoint.smAndDown ? 100 : 40"
+            :height="$vuetify.breakpoint.smAndDown ? 50 : 20"
             :src="require(`@/assets/diani_crystal/4.png`)"
             @click="changeSource('4.png')"
           />
@@ -217,7 +217,7 @@
             {{ "We will get back to you via email or SMS in the shortest time" }}
           </p>
           <div class="d-flex justify-end">
-            <v-btn class="success" :disabled="!enquiryValid" :loading="enquire_loading" @click="enquireMethod">
+            <v-btn class="success" :disabled="!enquiryValid" :loading="enquire_loading">
               send
             </v-btn>
           </div>
@@ -342,28 +342,6 @@ export default {
     ...mapActions(['toogleAlertBox']),
     changeSource (code) {
       this.img_source = code
-    },
-    enquireMethod () {
-      try {
-        // this.enquire_loading = true
-        // const response = await
-        // axios.post(process.env.VUE_APP_API + '/api/enquire', this.contact_data).then((response) => {
-        //   console.log(response)
-        //   const alert_box_info = {
-        //     status: true,
-        //     information: 'Enquiry recorded successfully, we shall get in touch as soon as possible.',
-        //     code: 'success'
-        //   }
-        //   this.toogleAlertBox(alert_box_info)
-        //   this.contact_data = {
-        //     subject: '#Diani Crystal Garden'
-        //   }
-        //   this.enquire_loading = false
-        // })
-        console.log('response')
-      } catch (e) {
-        console.log(e)
-      }
     }
   }
 }

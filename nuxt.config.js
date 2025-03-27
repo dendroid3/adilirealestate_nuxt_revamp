@@ -30,6 +30,12 @@ export default {
       { rel: 'preconnect', href: 'https://fonts.googleapis.com', crossorigin: 'anonymous' },
       { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' },
 
+      // Load Poppins font (400, 500, 600, 700 weights)
+      { 
+        rel: 'stylesheet', 
+        href: 'https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap' 
+      },
+      
       { rel: 'stylesheet', type: 'text/css', href: 'https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css' },
       { rel: 'stylesheet', type: 'text/css', href: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css' }
     ]
