@@ -103,27 +103,30 @@
       </v-col>
     </v-row>
     <v-row class="mb-4">
-      <v-col class="col-12 col-md-10 offset-md-1 text-center">
-        <p>
+      <v-col class="col-12 col-md-10 offset-md-1">
+        <p class="text-center">
           Diani Twins Court is an exclusive gated estate nestled in a thriving neighborhood just 4km from Diani beach- Africa's leading beach destination. The property boasts of a 1km direct access from Lunga Lunga Highway offering unmatched accessibility. Diani Twins Court is conveniently located close to key Diani amenities such as Diani Market, Diani Shopping Center & Diani Airport immersing you into the magical Diani lifestyle.
         </p>
-        <p>
+        <p class="text-center">
           Whether you are looking to build a holiday home or retirement home, Diani Twins Court is the perfect place for you. Buy & Live where others vacation.
         </p>
-        <ul class="text-center">
-          <li>✅4KM to the beach</li>
-          <li>✅1KM off Lunga-Lunga highway</li>
-          <li>✅15mins from Diani Airport</li>
-          <li>✅Value Added Gated Community </li>
-          <li>✅Serene, Fast Developing Neighborhood</li>
-          <li>✅Near key social amenities & 5 star resorts</li>
-        </ul>
-        <div class="rounded blue lighten-3 pa-4">
-          <p class="text-h4 text-bold">
+        <div class="d-flex justify-start">
+          <ul>
+            <li>✅4KM to the beach</li>
+            <li>✅1KM off Lunga-Lunga highway</li>
+            <li>✅15mins from Diani Airport</li>
+            <li>✅Value Added Gated Community </li>
+            <li>✅Serene, Fast Developing Neighborhood</li>
+            <li>✅Near key social amenities & 5 star resorts</li>
+          </ul>
+        </div>
+        <div class="rounded blue lighten-3 pa-4 text-center">
+          <p class="text-h4 text-bold text-center">
             {{ "Buy & Live where others vacation. Contact us today to secure your plot" }}
           </p>
 
           <v-dialog
+            class="d-flex justify-center"
             v-model="dialog"
             max-width="500px"
             transition="dialog-top-transition"

@@ -91,8 +91,8 @@
       </v-col>
     </v-row>
     <v-row class="mb-4">
-      <v-col class="col-12 col-md-10 offset-md-1 text-center">
-        <ul class="text-center">
+      <v-col class="col-12 col-md-10 offset-md-1">
+        <ul>
           <li>✅Value Added - Fenced and Gated</li>
           <li>✅1KM off Lungalunga Highway</li>
           <li>✅4KM to the Diani Whitesands Beach</li>

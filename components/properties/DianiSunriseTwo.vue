@@ -124,8 +124,8 @@
       </v-col>
     </v-row>
     <v-row class="mb-4">
-      <v-col class="col-12 col-md-10 offset-md-1 text-center">
-        <ul class="text-center">
+      <v-col class="col-12 col-md-10 offset-md-1">
+        <ul>
           <li>✅Prime Location - 4KM to the beach</li>
           <li>✅1KM to the highway - 4 Min drive</li>
           <li>✅Gated and Secure community</li>

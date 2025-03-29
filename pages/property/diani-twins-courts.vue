@@ -71,25 +71,25 @@
         </div>
 
         <v-col class="col-12 d-flex justify-center">
-            <v-img
+          <v-img
             class="rounded red mx-1"
             :class="{
               'lighten-4': img_source !== '00.png'
             }"
             contain
-            :width="$vuetify.breakpoint.smAndDown ? 80 : 40"
-            :height="$vuetify.breakpoint.smAndDown ? 40 : 20"
+            :width="$vuetify.breakpoint.smAndDown ? 100 : 40"
+            :height="$vuetify.breakpoint.smAndDown ? 50 : 20"
             :src="require(`@/assets/new_project/00.png`)"
             @click="changeSource('00.png')"
-            />
+          />
           <v-img
             class="rounded red mx-1"
             :class="{
               'lighten-4': img_source !== '01.PNG'
             }"
             contain
-            :width="$vuetify.breakpoint.smAndDown ? 80 : 40"
-            :height="$vuetify.breakpoint.smAndDown ? 40 : 20"
+            :width="$vuetify.breakpoint.smAndDown ? 100 : 40"
+            :height="$vuetify.breakpoint.smAndDown ? 50 : 20"
             :src="require(`@/assets/new_project/01.PNG`)"
             @click="changeSource('01.PNG')"
           />
@@ -99,8 +99,8 @@
               'lighten-4': img_source !== '02.PNG'
             }"
             contain
-            :width="$vuetify.breakpoint.smAndDown ? 80 : 40"
-            :height="$vuetify.breakpoint.smAndDown ? 40 : 20"
+            :width="$vuetify.breakpoint.smAndDown ? 100 : 40"
+            :height="$vuetify.breakpoint.smAndDown ? 50 : 20"
             :src="require(`@/assets/new_project/02.PNG`)"
             @click="changeSource('02.PNG')"
           />
@@ -110,8 +110,8 @@
               'lighten-4': img_source !== '03.PNG'
             }"
             contain
-            :width="$vuetify.breakpoint.smAndDown ? 80 : 40"
-            :height="$vuetify.breakpoint.smAndDown ? 40 : 20"
+            :width="$vuetify.breakpoint.smAndDown ? 100 : 40"
+            :height="$vuetify.breakpoint.smAndDown ? 50 : 20"
             :src="require(`@/assets/new_project/03.PNG`)"
             @click="changeSource('03.PNG')"
           />
@@ -121,8 +121,8 @@
               'lighten-4': img_source !== '04.PNG'
             }"
             contain
-            :width="$vuetify.breakpoint.smAndDown ? 80 : 40"
-            :height="$vuetify.breakpoint.smAndDown ? 40 : 20"
+            :width="$vuetify.breakpoint.smAndDown ? 100 : 40"
+            :height="$vuetify.breakpoint.smAndDown ? 50 : 20"
             :src="require(`@/assets/new_project/04.PNG`)"
             @click="changeSource('04.PNG')"
           />
@@ -132,8 +132,8 @@
               'lighten-4': img_source !== '05.PNG'
             }"
             contain
-            :width="$vuetify.breakpoint.smAndDown ? 80 : 40"
-            :height="$vuetify.breakpoint.smAndDown ? 40 : 20"
+            :width="$vuetify.breakpoint.smAndDown ? 100 : 40"
+            :height="$vuetify.breakpoint.smAndDown ? 50 : 20"
             :src="require(`@/assets/new_project/05.PNG`)"
             @click="changeSource('05.PNG')"
           />
@@ -184,13 +184,13 @@
             {{ "Near Diani 5-star Hotels." }}
           </h5>
         </v-col> -->
-        <p>
+        <p class="text-center">
           Diani Twins Court is an exclusive gated estate nestled in a thriving neighborhood just 4km from Diani beach- Africa's leading beach destination. The property boasts of a 1km direct access from Lunga Lunga Highway offering unmatched accessibility. Diani Twins Court is conveniently located close to key Diani amenities such as Diani Market, Diani Shopping Center & Diani Airport immersing you into the magical Diani lifestyle.
         </p>
-        <p>
+        <p class="text-center">
           Whether you are looking to build a holiday home or retirement home, Diani Twins Court is the perfect place for you. Buy & Live where others vacation.
         </p>
-        <ul class="text-center">
+        <ul>
           <li>✅4KM to the beach</li>
           <li>✅1KM off Lunga-Lunga highway</li>
           <li>✅15mins from Diani Airport</li>

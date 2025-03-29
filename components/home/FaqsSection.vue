@@ -48,7 +48,7 @@ export default {
         },
         {
           question: '<b>Q:</b> How long does the title processing take?',
-          answer: 'The title transfer process takes 60 to 120 days after completion of payment'
+          answer: 'The title transfer process takes 30 to 60 days after completion of payment'
         },
         {
           question: '<b>Q:</b> What modes of payment do you have?',
@@ -56,7 +56,7 @@ export default {
         },
         {
           question: '<b>Q:</b> Do you accept Mpesa option?',
-          answer: 'Yes, we you can conveniently make your payment through our Mpesa Till number 244744.'
+          answer: 'Yes, we you can conveniently make your payment through our Mpesa paybill number.'
         },
         {
           question: '<b>Q:</b> What size are the plots?',
@@ -64,7 +64,7 @@ export default {
         },
         {
           question: '<b>Q:</b> What documents do I need for the purchase?',
-          answer: 'You need a national ID or a valid Kenyan passport, KRA pin & Passport photo for legal agreement drafting and preparation of transfer forms'
+          answer: 'You need a national ID or a valid Kenyan passport, KRA pin & Passport photo for legal agreement and ownership transfer process.'
         },
         {
           question: '<b>Q:</b> How can we contact you?',
